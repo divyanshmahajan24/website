@@ -1,0 +1,214 @@
+@import "./main/theme.scss";
+@import "./main/helpers.scss";
+
+body {
+  font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial,
+    Sans-serif;
+}
+
+.top-bar {
+  background-color: $black;
+  padding: 16px 13%;
+  display: flex;
+  justify-content: space-between;
+
+  #logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: $white;
+    display: inline-block;
+  }
+
+  ul.nav {
+    align-items: center;
+
+    a.nav-link {
+      color: $white;
+      font-size: 18px;
+
+      &:hover {
+        color: $gray;
+      }
+    }
+    li:first-child {
+      margin-left: 24px;
+    }
+  }
+
+  ul.social-icons {
+    i {
+      color: $white;
+      font-size: 28px;
+    }
+  }
+}
+
+.page-header {
+  font-size: 56px;
+  letter-spacing: -2px;
+  line-height: 1.2;
+  font-family: "neosans regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizelegibility;
+  font-weight: 500;
+}
+
+.page-sub-header {
+  color: $gray;
+  font-size: 24px;
+  letter-spacing: 0.4px;
+}
+
+.intro {
+  line-height: 1.8;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0.6px;
+}
+
+#about-me-description {
+  margin-top: 40px;
+
+  .action-buttons {
+    .follow-button {
+      margin-bottom: 0;
+    }
+  }
+}
+
+#random-facts {
+  #facts {
+    li {
+      font-size: 18px;
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .sub-header {
+    margin-bottom: 1rem;
+  }
+}
+
+section {
+  &.main {
+    padding: 3%;
+  }
+}
+
+footer {
+  #footer {
+    position: relative;
+    z-index: 99;
+  }
+
+  section.main {
+    padding: 2%;
+  }
+
+  ul.nav {
+    a.nav-link {
+      color: $gray;
+
+      &:hover {
+        color: $neutral;
+      }
+
+      &.active {
+        color: $neutral;
+      }
+    }
+  }
+
+  .arrow-section {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: -50px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0, #ffffff),
+      color-stop(1, rgba(255, 255, 255, 0))
+    );
+    display: flex;
+    justify-content: center;
+
+    .arrow {
+      background: transparent url("/images/sprite.png") 0 -217px;
+      width: 118px;
+      height: 90px;
+      cursor: pointer;
+
+      &:hover {
+        position: relative;
+        top: -4px;
+      }
+    }
+  }
+
+  position: relative;
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  background: $light-gray;
+
+  .follow-buttons {
+    justify-content: flex-end;
+
+    .follow-button {
+      margin-bottom: 0;
+
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+  }
+}
+
+.follow-button {
+  border-radius: 3px;
+  font-size: 12px;
+  color: $white;
+  padding: 1px 4px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 16px 16px 0;
+
+  &.fb {
+    background-color: $fb-blue;
+
+    &:hover {
+      background-color: darken($twitter-blue, 10%);
+    }
+  }
+
+  &.twitter {
+    background-color: $twitter-blue;
+
+    &:hover {
+      background-color: darken($twitter-blue, 10%);
+    }
+  }
+
+  &.linkedin {
+    background-color: $linkedin-blue;
+
+    &:hover {
+      background-color: darken($twitter-blue, 10%);
+    }
+  }
+
+  &.instagram {
+    background-color: $instagram-blue;
+
+    &:hover {
+      background-color: darken($twitter-blue, 10%);
+    }
+  }
+
+  .button-icon {
+    font-size: 14px;
+  }
+}
