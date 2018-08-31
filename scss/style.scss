@@ -62,8 +62,80 @@ body {
 .intro {
   line-height: 1.8;
   font-weight: 300;
+  color: $gray;
   font-size: 18px;
   letter-spacing: 0.6px;
+}
+
+#home {
+  .name-section {
+    #name {
+      text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+    }
+    ul.nav > li {
+      height: 4px;
+      width: 120px;
+      background-color: #e1e4e7;
+      border-radius: $global-radius;
+
+      &:first-child {
+        margin-bottom: 8px;
+      }
+
+      &:nth-child(2) {
+        margin-left: 40px;
+      }
+    }
+  }
+
+  #editor {
+    .editor-head {
+      background-color: #1a1a1a;
+      height: 30px;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      padding: 9px 10px;
+      border-bottom: 2px solid #000;
+
+      ul > li {
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        margin-right: 8px;
+
+        &.red {
+          background-color: #fc635d;
+        }
+        &.yellow {
+          background-color: #fdbc40;
+        }
+        &.green {
+          background-color: #34c84a;
+        }
+      }
+    }
+    .editor-content {
+      background-color: #212121;
+      height: 300px;
+      position: relative;
+      color: $white;
+      padding: 8px 12px;
+
+      #intro-class,
+      #export {
+        margin-top: 20px;
+      }
+
+      #intro-render,
+      #intro-render-end {
+        margin-left: 16px;
+      }
+
+      #intro-return {
+        margin-left: 32px;
+      }
+    }
+  }
 }
 
 #about-me-description {
