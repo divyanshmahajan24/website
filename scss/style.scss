@@ -17,7 +17,21 @@ body {
     width: 60px;
     border-radius: 50%;
     background-color: $white;
+    color: $neutral;
     display: inline-block;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      background-color: lighten($gray, 0.3);
+    }
+
+    span {
+      position: absolute;
+      font-size: 40px;
+      left: 12px;
+      font-weight: 600;
+    }
   }
 
   ul.nav {
@@ -120,10 +134,16 @@ body {
       position: relative;
       color: $white;
       padding: 8px 12px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
 
       #intro-class,
       #export {
         margin-top: 20px;
+      }
+
+      #export {
+        margin-bottom: 40px;
       }
 
       #intro-render,

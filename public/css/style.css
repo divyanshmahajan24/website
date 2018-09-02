@@ -36,7 +36,17 @@ body {
     width: 60px;
     border-radius: 50%;
     background-color: #ffffff;
-    display: inline-block; }
+    color: #333333;
+    display: inline-block;
+    position: relative;
+    cursor: pointer; }
+    .top-bar #logo:hover {
+      background-color: #676767; }
+    .top-bar #logo span {
+      position: absolute;
+      font-size: 40px;
+      left: 12px;
+      font-weight: 600; }
   .top-bar ul.nav {
     align-items: center; }
     .top-bar ul.nav a.nav-link {
@@ -107,10 +117,14 @@ body {
   height: 300px;
   position: relative;
   color: #ffffff;
-  padding: 8px 12px; }
+  padding: 8px 12px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; }
   #home #editor .editor-content #intro-class,
   #home #editor .editor-content #export {
     margin-top: 20px; }
+  #home #editor .editor-content #export {
+    margin-bottom: 40px; }
   #home #editor .editor-content #intro-render,
   #home #editor .editor-content #intro-render-end {
     margin-left: 16px; }
