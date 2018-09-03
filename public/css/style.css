@@ -23,6 +23,9 @@
 .padding-right-0 {
   padding-right: 0 !important; }
 
+.section-box-shadow {
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1); }
+
 body {
   font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial, Sans-serif; }
 
@@ -80,6 +83,9 @@ body {
   font-size: 18px;
   letter-spacing: 0.6px; }
 
+#home #intro {
+  height: 600px; }
+
 #home .name-section #name {
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25); }
 
@@ -93,43 +99,44 @@ body {
   #home .name-section ul.nav > li:nth-child(2) {
     margin-left: 40px; }
 
-#home #editor .editor-head {
-  background-color: #1a1a1a;
-  height: 30px;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-  padding: 9px 10px;
-  border-bottom: 2px solid #000; }
-  #home #editor .editor-head ul > li {
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    margin-right: 8px; }
-    #home #editor .editor-head ul > li.red {
-      background-color: #fc635d; }
-    #home #editor .editor-head ul > li.yellow {
-      background-color: #fdbc40; }
-    #home #editor .editor-head ul > li.green {
-      background-color: #34c84a; }
-
-#home #editor .editor-content {
-  background-color: #212121;
-  height: 300px;
-  position: relative;
-  color: #ffffff;
-  padding: 8px 12px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px; }
-  #home #editor .editor-content #intro-class,
-  #home #editor .editor-content #export {
-    margin-top: 20px; }
-  #home #editor .editor-content #export {
-    margin-bottom: 40px; }
-  #home #editor .editor-content #intro-render,
-  #home #editor .editor-content #intro-render-end {
-    margin-left: 16px; }
-  #home #editor .editor-content #intro-return {
-    margin-left: 32px; }
+#home #editor {
+  margin-bottom: 40px; }
+  #home #editor .editor-head {
+    background-color: #1a1a1a;
+    height: 30px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 9px 10px;
+    border-bottom: 2px solid #000; }
+    #home #editor .editor-head ul > li {
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+      margin-right: 8px; }
+      #home #editor .editor-head ul > li.red {
+        background-color: #fc635d; }
+      #home #editor .editor-head ul > li.yellow {
+        background-color: #fdbc40; }
+      #home #editor .editor-head ul > li.green {
+        background-color: #34c84a; }
+  #home #editor .editor-content {
+    background-color: #212121;
+    height: 300px;
+    position: relative;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; }
+    #home #editor .editor-content #intro-class,
+    #home #editor .editor-content #export {
+      margin-top: 20px; }
+    #home #editor .editor-content #export {
+      margin-bottom: 40px; }
+    #home #editor .editor-content #intro-render,
+    #home #editor .editor-content #intro-render-end {
+      margin-left: 16px; }
+    #home #editor .editor-content #intro-return {
+      margin-left: 32px; }
 
 #about-me-description {
   margin-top: 40px; }

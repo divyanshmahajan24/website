@@ -10,85 +10,122 @@
 	<div>
 		{{> header}}
 		<div id="home">
-			<section class="main container">
-				<div class="row no-gutters">
-					<div class="col-xl-12 name-section">
-						<h1 class="page-header" id="name">Divyansh Mahajan</h1>
-						<ul class="nav flex-column">
-							<li class="name-border"></li>
-							<li class="name-border"></li>
-						</ul>
-					</div>
-					<div class="col-xl-7">
+			<div class="border-bottom">
+				<section class="main container" id="intro">
+					<div class="row no-gutters" style="height: 100%">
+						<div class="col-xl-12 name-section">
+							<h1 class="page-header" id="name">Divyansh Mahajan</h1>
+							<ul class="nav flex-column">
+								<li class="name-border"></li>
+								<li class="name-border"></li>
+							</ul>
+						</div>
+						<div class="col-xl-12">
+							<div class="row">
+								<div class="col-xl-7">
 
-					</div>
-					<div class="col-xl-5">
-						<h1 class="page-header" id="coder"><span><</span>coder <span>/></span></h1>
-						<p class="intro">
-							A full-stack programmer, who focuses on writing clean, elegant and efficient code.
-						</p>
-					</div>
-				</div>
-			</section>
-			<section class="main container">
-				<div class="row">
-					<div class="col-xl-12">
-						<div id="editor">
-							<div class="editor-head">
-								<ul class="nav">
-									<li class="nav-items red"></li>
-									<li class="nav-items yellow"></li>
-									<li class="nav-items green"></li>
-								</ul>
-							</div>
-							<div class="editor-content">
-								<div id="import-frontend"></div>
-								<div id="import-backend"></div>
-								<div id="intro-class"></div>
-								<div id="intro-render"></div>
-								<div id="intro-return"></div>
-								<div id="intro-render-end"></div>
-								<div id="intro-class-end"></div>
-								<div id="export"></div>
+								</div>
+								<div class="col-xl-5">
+									<h1 class="page-header" id="coder"><span><</span>coder <span>/></span></h1>
+									<p class="intro">
+										A full-stack programmer, who focuses on writing clean, elegant and efficient code. A full-stack programmer, who focuses on
+										writing clean, elegant and efficient code. A full-stack programmer, who focuses on writing clean, elegant and efficient
+										code.
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+			</div>
+			<div class="section-box-shadow">
+				<section class="main container">
+					<div class="row">
+						<div class="col-xl-12">
+							<div id="editor">
+								<div class="editor-head">
+									<ul class="nav">
+										<li class="nav-items red"></li>
+										<li class="nav-items yellow"></li>
+										<li class="nav-items green"></li>
+									</ul>
+								</div>
+								<div class="editor-content">
+									<div id="import-frontend"></div>
+									<div id="import-backend"></div>
+									<div id="intro-class"></div>
+									<div id="intro-render"></div>
+									<div id="intro-return"></div>
+									<div id="intro-render-end"></div>
+									<div id="intro-class-end"></div>
+									<div id="export"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
 		</div>
 	</div>
-	{{> foot}}
-	<script type="text/javascript">
-		/*
-		 * Type effect in editor
-		*/
-		let index = 0;
-		const speed = 50;
+	{{> footer}} {{> foot}}
 
-		// Type function
-		function type(text, id, index) {
-			if (index <= text.length) {
-				if (index === text.length) {
-					index = 0;
-					return;
+	<script type="text/javascript">
+		// Checks if the element is in viewport
+		const isInViewport = function (elem) {
+			const bounding = elem.getBoundingClientRect();
+			return (
+				bounding.top >= 0 &&
+				bounding.left >= 0 &&
+				bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+				bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+			);
+		};
+
+		// Handle typing effect
+		const handleTypeEffect = () => {
+			/*
+			 * Type effect in editor
+			*/
+			let index = 0;
+			const speed = 50;
+
+			// Type function
+			const type = (text, id, index) => {
+				if (index <= text.length) {
+					if (index === text.length) {
+						index = 0;
+						return;
+					}
+					document.getElementById(id).innerHTML += text.charAt(index);
+					index++;
+					setTimeout(() => { type(text, id, index) }, speed);
 				}
-				document.getElementById(id).innerHTML += text.charAt(index);
-				index++;
-				setTimeout(() => { type(text, id, index) }, speed);
 			}
+
+			type("import * from 'frontend';", "import-frontend", index);
+			setTimeout(() => { type("import * from 'backend';", "import-backend", index); }, 1300);
+			setTimeout(() => { type("class Divyansh extends Fullstack.Developer {", "intro-class", index); }, 2600);
+			setTimeout(() => { type("render( ) {", "intro-render", index); }, 5000);
+			setTimeout(() => { type("return 'Awesome applications!'", "intro-return", index); }, 6000);
+			setTimeout(() => { type("}", "intro-render-end", index); }, 7800);
+			setTimeout(() => { type("}", "intro-class-end", index); }, 8500);
+			setTimeout(() => { type("export default Divyansh;", "export", index); }, 9000);
+			/*
+			 * Type effect in editor end
+			*/
 		}
 
-		type("import * from 'frontend';", "import-frontend", index);
-		setTimeout(() => { type("import * from 'backend';", "import-backend", index); }, 1300);
-		setTimeout(() => { type("class Divyansh extends Fullstack.Developer {", "intro-class", index); }, 2600);
-		setTimeout(() => { type("render( ) {", "intro-render", index); }, 5000);
-		setTimeout(() => { type("return 'Awesome applications!'", "intro-return", index); }, 6000);
-		setTimeout(() => { type("}", "intro-render-end", index); }, 7800);
-		setTimeout(() => { type("}", "intro-class-end", index); }, 8500);
-		setTimeout(() => { type("export default Divyansh;", "export", index); }, 9000);
-		/*
-		 * Type effect in editor end
-		*/
+		// On scroll check if editor is in viewport
+		$(window).scroll(() => {
+			const element = document.querySelector('#editor');
+
+			if (isInViewport(element)) {
+				console.log('hello')
+				//handleTypeEffect();
+			}
+		});
+
+
 	</script>
 </body>
 

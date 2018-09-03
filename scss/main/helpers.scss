@@ -1,3 +1,5 @@
+@import "./theme.scss";
+
 .flex {
   display: flex;
 
@@ -35,4 +37,9 @@
 
 .padding-right-0 {
   padding-right: 0 !important;
+}
+
+// Box shadow
+.section-box-shadow {
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
 }
