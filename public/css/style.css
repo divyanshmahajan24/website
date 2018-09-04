@@ -84,6 +84,21 @@ body {
   font-size: 18px;
   letter-spacing: 0.6px; }
 
+#home #main {
+  position: relative; }
+  #home #main img {
+    position: absolute;
+    bottom: 0;
+    width: 40%;
+    right: 150px;
+    animation: slide-left 1s; }
+
+@keyframes slide-left {
+  from {
+    right: -600px; }
+  to {
+    right: 150px; } }
+
 #home #intro {
   height: calc(100vh - 92px); }
 
@@ -112,24 +127,22 @@ body {
     #home .name-section ul.nav > li:first-child {
       margin-bottom: 8px; }
     #home .name-section ul.nav > li:nth-child(2) {
-      margin-left: 40px; }
+      margin-left: 60px; }
 
 #home #intro-coder {
-  animation: slide-left 0.3s; }
+  animation: fade-in 1s; }
 
 #home #coder {
-  animation: slide-left 1.25s; }
+  animation: fade-in 1s; }
 
-@keyframes slide-left {
+@keyframes fade-in {
   from {
-    margin-left: 100%;
-    width: 300%; }
+    opacity: 0; }
   to {
-    margin-left: 0%;
-    width: 100%; } }
+    opacity: 1; } }
 
 #home #editor {
-  margin-bottom: 40px; }
+  margin: 40px 0 60px; }
   #home #editor .editor-head {
     background-color: #1a1a1a;
     height: 30px;
@@ -168,17 +181,31 @@ body {
       margin-left: 32px; }
 
 #about-me-description {
-  margin-top: 40px; }
+  margin-top: -70px; }
   #about-me-description .action-buttons .follow-button {
     margin-bottom: 0; }
 
-#random-facts #facts li {
-  font-size: 18px;
-  font-weight: 300;
-  margin-bottom: 0.5rem; }
+#random-facts .facts-section {
+  padding: 10% 3%; }
+  #random-facts .facts-section .facts-images {
+    position: relative; }
+    #random-facts .facts-section .facts-images img.laptop {
+      width: 100%; }
+    #random-facts .facts-section .facts-images img.facts {
+      position: absolute;
+      top: 40px;
+      width: 50%;
+      left: 145px; }
+
+#random-facts #facts {
+  margin-left: 3rem; }
+  #random-facts #facts li {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 0.5rem; }
 
 #random-facts .sub-header {
-  margin-bottom: 1rem; }
+  margin: 0 0 1rem 3rem; }
 
 section.main {
   padding: 3%; }
@@ -226,11 +253,13 @@ footer {
 .follow-button {
   border-radius: 3px;
   font-size: 12px;
-  color: #ffffff;
+  color: #ffffff !important;
   padding: 1px 4px;
   cursor: pointer;
   display: inline-block;
   margin: 0 16px 16px 0; }
+  .follow-button:hover {
+    text-decoration: none; }
   .follow-button.fb {
     background-color: #3b5998; }
     .follow-button.fb:hover {

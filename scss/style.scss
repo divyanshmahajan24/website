@@ -83,6 +83,28 @@ body {
 }
 
 #home {
+  #main {
+    position: relative;
+
+    img {
+      position: absolute;
+      bottom: 0;
+      width: 40%;
+      right: 150px;
+      animation: slide-left 1s;
+    }
+
+    @keyframes slide-left {
+      from {
+        right: -600px;
+      }
+
+      to {
+        right: 150px;
+      }
+    }
+  }
+
   #intro {
     height: calc(100vh - 92px);
   }
@@ -125,33 +147,34 @@ body {
       }
 
       &:nth-child(2) {
-        margin-left: 40px;
+        margin-left: 60px;
       }
     }
   }
 
   #intro-coder {
-    animation: slide-left 0.3s;
+    animation: fade-in 1s;
   }
 
   #coder {
-    animation: slide-left 1.25s;
+    animation: fade-in 1s;
   }
 
-  @keyframes slide-left {
+  @keyframes fade-in {
     from {
-      margin-left: 100%;
-      width: 300%;
+      opacity: 0;
     }
-
     to {
-      margin-left: 0%;
-      width: 100%;
+      opacity: 1;
     }
   }
+
+  // #editor-section {
+  //   background: $background-light-gray;
+  // }
 
   #editor {
-    margin-bottom: 40px;
+    margin: 40px 0 60px;
 
     .editor-head {
       background-color: #1a1a1a;
@@ -209,7 +232,7 @@ body {
 }
 
 #about-me-description {
-  margin-top: 40px;
+  margin-top: -70px;
 
   .action-buttons {
     .follow-button {
@@ -219,7 +242,28 @@ body {
 }
 
 #random-facts {
+  .facts-section {
+    padding: 10% 3%;
+
+    .facts-images {
+      position: relative;
+
+      img.laptop {
+        width: 100%;
+      }
+
+      img.facts {
+        position: absolute;
+        top: 40px;
+        width: 50%;
+        left: 145px;
+      }
+    }
+  }
+
   #facts {
+    margin-left: 3rem;
+
     li {
       font-size: 18px;
       font-weight: 300;
@@ -228,7 +272,7 @@ body {
   }
 
   .sub-header {
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 3rem;
   }
 }
 
@@ -312,11 +356,15 @@ footer {
 .follow-button {
   border-radius: 3px;
   font-size: 12px;
-  color: $white;
+  color: $white !important;
   padding: 1px 4px;
   cursor: pointer;
   display: inline-block;
   margin: 0 16px 16px 0;
+
+  &:hover {
+    text-decoration: none;
+  }
 
   &.fb {
     background-color: $fb-blue;
