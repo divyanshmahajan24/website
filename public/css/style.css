@@ -187,6 +187,9 @@ body {
 
 #random-facts .facts-section {
   padding: 10% 3%; }
+  #random-facts .facts-section p.page-sub-header {
+    margin-left: 3rem;
+    animation: fadeIn 2s linear; }
   #random-facts .facts-section .facts-images {
     position: relative; }
     #random-facts .facts-section .facts-images img.laptop {
@@ -198,7 +201,9 @@ body {
       left: 145px; }
 
 #random-facts #facts {
-  margin-left: 3rem; }
+  margin-left: 3rem;
+  opacity: 1;
+  animation: fadeIn 2s linear; }
   #random-facts #facts li {
     font-size: 18px;
     font-weight: 300;
@@ -206,6 +211,12 @@ body {
 
 #random-facts .sub-header {
   margin: 0 0 1rem 3rem; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 section.main {
   padding: 3%; }

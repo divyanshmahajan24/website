@@ -245,6 +245,11 @@ body {
   .facts-section {
     padding: 10% 3%;
 
+    p.page-sub-header {
+      margin-left: 3rem;
+      animation: fadeIn 2s linear;
+    }
+
     .facts-images {
       position: relative;
 
@@ -263,6 +268,8 @@ body {
 
   #facts {
     margin-left: 3rem;
+    opacity: 1;
+    animation: fadeIn 2s linear;
 
     li {
       font-size: 18px;
@@ -273,6 +280,15 @@ body {
 
   .sub-header {
     margin: 0 0 1rem 3rem;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
 
