@@ -46,7 +46,7 @@
 								<img class="facts" src="/images/facts.png" alt="macbook">
 							</div>
 						</div>
-						<div class="col-xl-5">
+						<div class="col-xl-5" id="facts-text">
 							<p class="page-sub-header">Random facts</p>
 							<ul id="facts" class="nav flex-column">
 								<li class="nav-item">
@@ -106,6 +106,7 @@
 
 	<script type="text/javascript">
 		let typing = false;
+		let factsAnimation = false;
 
 		// Checks if the element is in viewport
 		const isInViewport = function (elem) {
@@ -152,6 +153,21 @@
 			*/
 		}
 
+		const HandleFactsAnimation = () => {
+			if(factsAnimation) {
+				return;
+			}
+
+			const laptop = $('.laptop');
+			const facts = $('.facts');
+			const factsText = $('#facts-text');
+
+			laptop.addClass('slide-laptop');
+			facts.addClass('slide-facts-image');
+			factsText.addClass('fade-facts-text');
+			factsAnimation = true;
+		}
+
 		// On scroll check if editor is in viewport
 		$(window).scroll(() => {
 			const element = document.querySelector('#editor');
@@ -163,6 +179,10 @@
 			if (isInViewport(element)) {
 				typing = true;
 				handleTypeEffect();
+			}
+
+			if($(window).scrollTop() > 300) {
+				HandleFactsAnimation();
 			}
 		});
 	</script>

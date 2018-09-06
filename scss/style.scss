@@ -169,10 +169,6 @@ body {
     }
   }
 
-  // #editor-section {
-  //   background: $background-light-gray;
-  // }
-
   #editor {
     margin: 40px 0 60px;
 
@@ -247,13 +243,13 @@ body {
 
     p.page-sub-header {
       margin-left: 3rem;
-      animation: fadeIn 2s linear;
     }
 
     .facts-images {
       position: relative;
 
       img.laptop {
+        margin-left: -800px;
         width: 100%;
       }
 
@@ -261,15 +257,18 @@ body {
         position: absolute;
         top: 40px;
         width: 50%;
-        left: 145px;
+        left: -500px;
       }
     }
+  }
+
+  #facts-text {
+    opacity: 0;
   }
 
   #facts {
     margin-left: 3rem;
     opacity: 1;
-    animation: fadeIn 2s linear;
 
     li {
       font-size: 18px;
@@ -278,16 +277,51 @@ body {
     }
   }
 
+  .slide-laptop {
+    animation: slideInLaptop 1s;
+    margin-left: 0 !important;
+
+    @keyframes slideInLaptop {
+      from {
+        margin-left: -800px;
+      }
+
+      to {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .slide-facts-image {
+    animation: slideInFacts 1s;
+    left: 145px !important;
+
+    @keyframes slideInFacts {
+      from {
+        left: -500px;
+      }
+
+      to {
+        left: 145px;
+      }
+    }
+  }
+
   .sub-header {
     margin: 0 0 1rem 3rem;
   }
 
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
+  .fade-facts-text {
+    opacity: 1 !important;
+    animation: fadeIn 2s linear;
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
   }
 }

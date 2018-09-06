@@ -188,29 +188,55 @@ body {
 #random-facts .facts-section {
   padding: 10% 3%; }
   #random-facts .facts-section p.page-sub-header {
-    margin-left: 3rem;
-    animation: fadeIn 2s linear; }
+    margin-left: 3rem; }
   #random-facts .facts-section .facts-images {
     position: relative; }
     #random-facts .facts-section .facts-images img.laptop {
+      margin-left: -800px;
       width: 100%; }
     #random-facts .facts-section .facts-images img.facts {
       position: absolute;
       top: 40px;
       width: 50%;
-      left: 145px; }
+      left: -500px; }
+
+#random-facts #facts-text {
+  opacity: 0; }
 
 #random-facts #facts {
   margin-left: 3rem;
-  opacity: 1;
-  animation: fadeIn 2s linear; }
+  opacity: 1; }
   #random-facts #facts li {
     font-size: 18px;
     font-weight: 300;
     margin-bottom: 0.5rem; }
 
+#random-facts .slide-laptop {
+  animation: slideInLaptop 1s;
+  margin-left: 0 !important; }
+
+@keyframes slideInLaptop {
+  from {
+    margin-left: -800px; }
+  to {
+    margin-left: 0; } }
+
+#random-facts .slide-facts-image {
+  animation: slideInFacts 1s;
+  left: 145px !important; }
+
+@keyframes slideInFacts {
+  from {
+    left: -500px; }
+  to {
+    left: 145px; } }
+
 #random-facts .sub-header {
   margin: 0 0 1rem 3rem; }
+
+#random-facts .fade-facts-text {
+  opacity: 1 !important;
+  animation: fadeIn 2s linear; }
 
 @keyframes fadeIn {
   0% {
