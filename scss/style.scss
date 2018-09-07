@@ -91,7 +91,7 @@ body {
       bottom: 0;
       width: 40%;
       right: 150px;
-      animation: slide-left 1s;
+      // animation: slide-left 1s;
     }
 
     @keyframes slide-left {
@@ -113,11 +113,11 @@ body {
     overflow: hidden;
 
     h1 {
-      animation: slide-right 1s;
+      // animation: slide-right 1s;
     }
 
     ul {
-      animation: slide-right 1.5s;
+      // animation: slide-right 1.5s;
     }
 
     @keyframes slide-right {

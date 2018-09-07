@@ -90,8 +90,7 @@ body {
     position: absolute;
     bottom: 0;
     width: 40%;
-    right: 150px;
-    animation: slide-left 1s; }
+    right: 150px; }
 
 @keyframes slide-left {
   from {
@@ -105,10 +104,6 @@ body {
 #home .name-section {
   width: 100%;
   overflow: hidden; }
-  #home .name-section h1 {
-    animation: slide-right 1s; }
-  #home .name-section ul {
-    animation: slide-right 1.5s; }
 
 @keyframes slide-right {
   from {
