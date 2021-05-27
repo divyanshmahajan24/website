@@ -54,10 +54,12 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
-  --color-text: #2e353f;
+  --light-purple: #c5d4f1;
+  --dark-purple: #456daf;
+  --color-primary: #37465f;
+  --color-text: #37465f;
   --color-text-light: #4f5969;
-  --color-heading: #1a202c;
+  --color-heading: var(--dark-purple);
   --color-heading-black: black;
   --color-accent: #d1dce5;
 }
@@ -81,6 +83,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  background-color: #e5f6fb;
 }
 
 footer {
@@ -252,6 +255,44 @@ a:focus {
 
 .global-header {
   margin-bottom: var(--spacing-12);
+  margin-top: var(--spacing-12);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .nav .nav-list-item {
+  font-family: var(--fontFamily-sans);
+  font-size: var(--fontSize-0);
+  font-weight: var(--fontWeight-semibold);
+  text-decoration: none;
+  padding: 0 4px 4px 4px;
+  border-bottom: 3px solid var(--light-purple);
+}
+
+.header .nav .nav-list-item:not(:last-child) {
+  margin-right: var(--spacing-2);
+}
+
+.header .nav .nav-list-item:hover {
+  text-decoration: none;
+  border-color: var(--dark-purple);
+}
+
+.header .social {
+  display: flex;
+  height: 32px;
+}
+
+.header .social a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header .social a svg path{
+  fill: var(--dark-purple);
 }
 
 .main-heading {
@@ -270,7 +311,7 @@ a:focus {
 
 .post-list-item h2 {
   font-size: var(--fontSize-4);
-  color: var(--color-primary);
+  color: var(--color-heading);
   margin-bottom: var(--spacing-2);
   margin-top: var(--spacing-0);
 }
