@@ -255,7 +255,14 @@ a:focus {
 
 .global-header {
   margin-bottom: var(--spacing-12);
-  margin-top: var(--spacing-12);
+  margin-top: var(--spacing-8);
+}
+
+.back-home {
+  margin-right: var(--spacing-2);
+  height: 32px;
+  font-weight: var(--fontWeight-semibold);
+  font-family: "Inter",system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Ubuntu,Droid Sans,Helvetica Neue,sans-serif;
 }
 
 .header {
@@ -283,10 +290,12 @@ a:focus {
 
 .header .social {
   display: flex;
+  align-items: center;
   height: 32px;
 }
 
 .header .social a {
+  margin-right: var(--spacing-2);
   text-decoration: none;
   cursor: pointer;
 }
@@ -354,6 +363,10 @@ a:focus {
 
 .blog-post-nav ul {
   margin: var(--spacing-0);
+}
+
+#posts-container {
+  margin-top: var(--spacing-16);
 }
 
 .gatsby-highlight {
